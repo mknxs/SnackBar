@@ -13,6 +13,8 @@
 		70E06BCC1F5465F20011DFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BCB1F5465F20011DFA5 /* Assets.xcassets */; };
 		70E06BCF1F5465F20011DFA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BCD1F5465F20011DFA5 /* LaunchScreen.storyboard */; };
 		70E06BDA1F5465F20011DFA5 /* SnackBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BD91F5465F20011DFA5 /* SnackBarTests.swift */; };
+		70E06BE51F546AA90011DFA5 /* SnackBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BE41F546AA90011DFA5 /* SnackBarManager.swift */; };
+		70E06BE71F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BE61F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		70E06BD51F5465F20011DFA5 /* SnackBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnackBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E06BD91F5465F20011DFA5 /* SnackBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarTests.swift; sourceTree = "<group>"; };
 		70E06BDB1F5465F20011DFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70E06BE41F546AA90011DFA5 /* SnackBarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarManager.swift; sourceTree = "<group>"; };
+		70E06BE61F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarManager_SnackBarSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,11 @@
 		70E06BC31F5465F20011DFA5 /* SnackBar */ = {
 			isa = PBXGroup;
 			children = (
+				70E06BE81F546C110011DFA5 /* Resouces */,
 				70E06BC41F5465F20011DFA5 /* AppDelegate.swift */,
 				70E06BC61F5465F20011DFA5 /* ViewController.swift */,
-				70E06BC81F5465F20011DFA5 /* Main.storyboard */,
-				70E06BCB1F5465F20011DFA5 /* Assets.xcassets */,
-				70E06BCD1F5465F20011DFA5 /* LaunchScreen.storyboard */,
-				70E06BD01F5465F20011DFA5 /* Info.plist */,
+				70E06BE41F546AA90011DFA5 /* SnackBarManager.swift */,
+				70E06BE61F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift */,
 			);
 			path = SnackBar;
 			sourceTree = "<group>";
@@ -94,6 +97,17 @@
 				70E06BDB1F5465F20011DFA5 /* Info.plist */,
 			);
 			path = SnackBarTests;
+			sourceTree = "<group>";
+		};
+		70E06BE81F546C110011DFA5 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				70E06BD01F5465F20011DFA5 /* Info.plist */,
+				70E06BC81F5465F20011DFA5 /* Main.storyboard */,
+				70E06BCD1F5465F20011DFA5 /* LaunchScreen.storyboard */,
+				70E06BCB1F5465F20011DFA5 /* Assets.xcassets */,
+			);
+			name = Resouces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E06BE71F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift in Sources */,
+				70E06BE51F546AA90011DFA5 /* SnackBarManager.swift in Sources */,
 				70E06BC71F5465F20011DFA5 /* ViewController.swift in Sources */,
 				70E06BC51F5465F20011DFA5 /* AppDelegate.swift in Sources */,
 			);
@@ -408,6 +424,7 @@
 				70E06BE01F5465F20011DFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70E06BE11F5465F20011DFA5 /* Build configuration list for PBXNativeTarget "SnackBarTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +433,7 @@
 				70E06BE31F5465F20011DFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
