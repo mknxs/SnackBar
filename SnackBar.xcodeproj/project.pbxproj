@@ -11,7 +11,7 @@
 		70E06BDA1F5465F20011DFA5 /* SnackBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BD91F5465F20011DFA5 /* SnackBarTests.swift */; };
 		70E06BE51F546AA90011DFA5 /* SnackBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BE41F546AA90011DFA5 /* SnackBarManager.swift */; };
 		70E06BE71F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BE61F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift */; };
-		70E06BEA1F5473890011DFA5 /* TransparentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BE91F5473890011DFA5 /* TransparentWindow.swift */; };
+		70E06BEA1F5473890011DFA5 /* SnackBarWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BE91F5473890011DFA5 /* SnackBarWindow.swift */; };
 		70E06BF01F5474890011DFA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BEC1F5474890011DFA5 /* LaunchScreen.storyboard */; };
 		70E06BF11F5474890011DFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BEE1F5474890011DFA5 /* Main.storyboard */; };
 		70E06BF31F5474920011DFA5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BF21F5474920011DFA5 /* Info.plist */; };
@@ -40,7 +40,7 @@
 		70E06BDB1F5465F20011DFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E06BE41F546AA90011DFA5 /* SnackBarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarManager.swift; sourceTree = "<group>"; };
 		70E06BE61F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarManager_SnackBarSet.swift; sourceTree = "<group>"; };
-		70E06BE91F5473890011DFA5 /* TransparentWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentWindow.swift; sourceTree = "<group>"; };
+		70E06BE91F5473890011DFA5 /* SnackBarWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarWindow.swift; sourceTree = "<group>"; };
 		70E06BED1F5474890011DFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70E06BEF1F5474890011DFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70E06BF21F5474920011DFA5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 				70E06BC41F5465F20011DFA5 /* AppDelegate.swift */,
 				70E06BE41F546AA90011DFA5 /* SnackBarManager.swift */,
 				70E06BE61F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift */,
-				70E06BE91F5473890011DFA5 /* TransparentWindow.swift */,
+				70E06BE91F5473890011DFA5 /* SnackBarWindow.swift */,
 				70E06BF61F5474CF0011DFA5 /* ViewController.swift */,
 				70E06BF71F5474CF0011DFA5 /* ViewController.xib */,
 				70E06BFA1F5476DD0011DFA5 /* SnackBarViewController.swift */,
@@ -233,7 +233,7 @@
 				70E06BFC1F5476DD0011DFA5 /* SnackBarViewController.swift in Sources */,
 				70E06BE71F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift in Sources */,
 				70E06BE51F546AA90011DFA5 /* SnackBarManager.swift in Sources */,
-				70E06BEA1F5473890011DFA5 /* TransparentWindow.swift in Sources */,
+				70E06BEA1F5473890011DFA5 /* SnackBarWindow.swift in Sources */,
 				70E06BC51F5465F20011DFA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
