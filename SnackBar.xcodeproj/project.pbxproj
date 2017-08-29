@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		70E06BC51F5465F20011DFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BC41F5465F20011DFA5 /* AppDelegate.swift */; };
-		70E06BC71F5465F20011DFA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BC61F5465F20011DFA5 /* ViewController.swift */; };
-		70E06BCA1F5465F20011DFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BC81F5465F20011DFA5 /* Main.storyboard */; };
-		70E06BCC1F5465F20011DFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BCB1F5465F20011DFA5 /* Assets.xcassets */; };
-		70E06BCF1F5465F20011DFA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BCD1F5465F20011DFA5 /* LaunchScreen.storyboard */; };
 		70E06BDA1F5465F20011DFA5 /* SnackBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BD91F5465F20011DFA5 /* SnackBarTests.swift */; };
 		70E06BE51F546AA90011DFA5 /* SnackBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BE41F546AA90011DFA5 /* SnackBarManager.swift */; };
 		70E06BE71F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BE61F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift */; };
+		70E06BEA1F5473890011DFA5 /* TransparentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BE91F5473890011DFA5 /* TransparentWindow.swift */; };
+		70E06BF01F5474890011DFA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BEC1F5474890011DFA5 /* LaunchScreen.storyboard */; };
+		70E06BF11F5474890011DFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BEE1F5474890011DFA5 /* Main.storyboard */; };
+		70E06BF31F5474920011DFA5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BF21F5474920011DFA5 /* Info.plist */; };
+		70E06BF51F5474990011DFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BF41F5474990011DFA5 /* Assets.xcassets */; };
+		70E06BF81F5474CF0011DFA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BF61F5474CF0011DFA5 /* ViewController.swift */; };
+		70E06BF91F5474CF0011DFA5 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BF71F5474CF0011DFA5 /* ViewController.xib */; };
+		70E06BFC1F5476DD0011DFA5 /* SnackBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E06BFA1F5476DD0011DFA5 /* SnackBarViewController.swift */; };
+		70E06BFD1F5476DD0011DFA5 /* SnackBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E06BFB1F5476DD0011DFA5 /* SnackBarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +35,20 @@
 /* Begin PBXFileReference section */
 		70E06BC11F5465F20011DFA5 /* SnackBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E06BC41F5465F20011DFA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70E06BC61F5465F20011DFA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		70E06BC91F5465F20011DFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		70E06BCB1F5465F20011DFA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		70E06BCE1F5465F20011DFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		70E06BD01F5465F20011DFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E06BD51F5465F20011DFA5 /* SnackBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnackBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E06BD91F5465F20011DFA5 /* SnackBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarTests.swift; sourceTree = "<group>"; };
 		70E06BDB1F5465F20011DFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E06BE41F546AA90011DFA5 /* SnackBarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarManager.swift; sourceTree = "<group>"; };
 		70E06BE61F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarManager_SnackBarSet.swift; sourceTree = "<group>"; };
+		70E06BE91F5473890011DFA5 /* TransparentWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentWindow.swift; sourceTree = "<group>"; };
+		70E06BED1F5474890011DFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70E06BEF1F5474890011DFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70E06BF21F5474920011DFA5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70E06BF41F5474990011DFA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70E06BF61F5474CF0011DFA5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70E06BF71F5474CF0011DFA5 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		70E06BFA1F5476DD0011DFA5 /* SnackBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBarViewController.swift; sourceTree = "<group>"; };
+		70E06BFB1F5476DD0011DFA5 /* SnackBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SnackBarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +90,15 @@
 		70E06BC31F5465F20011DFA5 /* SnackBar */ = {
 			isa = PBXGroup;
 			children = (
-				70E06BE81F546C110011DFA5 /* Resouces */,
+				70E06BEB1F54746F0011DFA5 /* Resources */,
 				70E06BC41F5465F20011DFA5 /* AppDelegate.swift */,
-				70E06BC61F5465F20011DFA5 /* ViewController.swift */,
 				70E06BE41F546AA90011DFA5 /* SnackBarManager.swift */,
 				70E06BE61F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift */,
+				70E06BE91F5473890011DFA5 /* TransparentWindow.swift */,
+				70E06BF61F5474CF0011DFA5 /* ViewController.swift */,
+				70E06BF71F5474CF0011DFA5 /* ViewController.xib */,
+				70E06BFA1F5476DD0011DFA5 /* SnackBarViewController.swift */,
+				70E06BFB1F5476DD0011DFA5 /* SnackBarViewController.xib */,
 			);
 			path = SnackBar;
 			sourceTree = "<group>";
@@ -99,15 +112,15 @@
 			path = SnackBarTests;
 			sourceTree = "<group>";
 		};
-		70E06BE81F546C110011DFA5 /* Resouces */ = {
+		70E06BEB1F54746F0011DFA5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				70E06BD01F5465F20011DFA5 /* Info.plist */,
-				70E06BC81F5465F20011DFA5 /* Main.storyboard */,
-				70E06BCD1F5465F20011DFA5 /* LaunchScreen.storyboard */,
-				70E06BCB1F5465F20011DFA5 /* Assets.xcassets */,
+				70E06BF41F5474990011DFA5 /* Assets.xcassets */,
+				70E06BF21F5474920011DFA5 /* Info.plist */,
+				70E06BEC1F5474890011DFA5 /* LaunchScreen.storyboard */,
+				70E06BEE1F5474890011DFA5 /* Main.storyboard */,
 			);
-			name = Resouces;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,9 +206,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70E06BCF1F5465F20011DFA5 /* LaunchScreen.storyboard in Resources */,
-				70E06BCC1F5465F20011DFA5 /* Assets.xcassets in Resources */,
-				70E06BCA1F5465F20011DFA5 /* Main.storyboard in Resources */,
+				70E06BF91F5474CF0011DFA5 /* ViewController.xib in Resources */,
+				70E06BF01F5474890011DFA5 /* LaunchScreen.storyboard in Resources */,
+				70E06BF11F5474890011DFA5 /* Main.storyboard in Resources */,
+				70E06BFD1F5476DD0011DFA5 /* SnackBarViewController.xib in Resources */,
+				70E06BF51F5474990011DFA5 /* Assets.xcassets in Resources */,
+				70E06BF31F5474920011DFA5 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E06BF81F5474CF0011DFA5 /* ViewController.swift in Sources */,
+				70E06BFC1F5476DD0011DFA5 /* SnackBarViewController.swift in Sources */,
 				70E06BE71F546ACF0011DFA5 /* SnackBarManager_SnackBarSet.swift in Sources */,
 				70E06BE51F546AA90011DFA5 /* SnackBarManager.swift in Sources */,
-				70E06BC71F5465F20011DFA5 /* ViewController.swift in Sources */,
+				70E06BEA1F5473890011DFA5 /* TransparentWindow.swift in Sources */,
 				70E06BC51F5465F20011DFA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,20 +257,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		70E06BC81F5465F20011DFA5 /* Main.storyboard */ = {
+		70E06BEC1F5474890011DFA5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				70E06BC91F5465F20011DFA5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		70E06BCD1F5465F20011DFA5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				70E06BCE1F5465F20011DFA5 /* Base */,
+				70E06BED1F5474890011DFA5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		70E06BEE1F5474890011DFA5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70E06BEF1F5474890011DFA5 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
