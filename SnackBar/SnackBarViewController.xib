@@ -14,6 +14,7 @@
                 <outlet property="button" destination="YTm-BT-yzA" id="FCK-oz-NgA"/>
                 <outlet property="snackBarHeight" destination="TU3-up-bTT" id="hoN-Cc-x5Z"/>
                 <outlet property="snackBarView" destination="cfX-AW-tVD" id="f8c-ny-KFf"/>
+                <outlet property="snackBarViewBottomMargin" destination="mhQ-0b-sb6" id="M0Z-Zd-GlU"/>
                 <outlet property="titleLabel" destination="2pD-an-MTZ" id="7kQ-Hf-d9U"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfX-AW-tVD">
-                    <rect key="frame" x="0.0" y="632" width="375" height="35"/>
+                    <rect key="frame" x="0.0" y="667" width="375" height="35"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-BT-yzA">
                             <rect key="frame" x="315" y="4.5" width="45" height="26"/>
@@ -52,7 +53,7 @@
             <constraints>
                 <constraint firstItem="cfX-AW-tVD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8HT-cL-zbJ"/>
                 <constraint firstAttribute="trailing" secondItem="cfX-AW-tVD" secondAttribute="trailing" id="VW0-fp-6tG"/>
-                <constraint firstAttribute="bottom" secondItem="cfX-AW-tVD" secondAttribute="bottom" id="mhQ-0b-sb6"/>
+                <constraint firstAttribute="bottom" secondItem="cfX-AW-tVD" secondAttribute="bottom" constant="-35" id="mhQ-0b-sb6"/>
             </constraints>
             <point key="canvasLocation" x="-94.5" y="-16.5"/>
         </view>

@@ -18,18 +18,36 @@ extension SnackBarManager {
         var action: (() -> Void)? = nil
         
         enum Button {
+            case nothing
             case close
             case undo
             case custom(String)
             
             var string: String {
                 switch self {
+                case .nothing:
+                    return ""
                 case .close:
                     return "close" // FIXME: 
                 case .undo:
                     return ""   // FIXME: 
                 case .custom(let s):
                     return s
+                }
+            }
+            
+            static func ==(v1: Button, v2: Button) -> Bool {
+                switch (v1, v2) {
+                case (.nothing, .nothing):
+                    return true
+                case (.close, .close):
+                    return true
+                case (.undo, .undo):
+                    return true
+                case (.custom(let s1), .custom(let s2)) where s1 == s2:
+                    return true
+                default:
+                    return false
                 }
             }
         }

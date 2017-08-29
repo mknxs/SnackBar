@@ -26,6 +26,15 @@ class SnackBarManager {
         w.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
         w.frame = f
         w.rootViewController = self.snackBarViewController
-        w.isHidden = false
+    }
+    
+    var isEnabled: Bool {
+        get { return !self.window.isHidden }
+        set { self.window.isHidden = !newValue }
+    }
+    
+    func show(title: String, button: SnackBarSet.Button, lifeTime: TimeInterval = 5.0, action: (() -> Void)? = nil) {
+        let set = SnackBarSet(title: title, button: button, lifeTime: lifeTime, action: action)
+        self.snackBarViewController.show(set:set, animated: true)
     }
 }
