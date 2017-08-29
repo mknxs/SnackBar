@@ -17,6 +17,15 @@ class SnackBarManager {
     let snackBarViewController = SnackBarViewController(nibName: nil, bundle: nil)
     
     init() {
-        // TODO: 初期処理
+        let w = self.window
+        w.windowLevel = UIWindowLevelAlert
+        var f = UIScreen.main.bounds
+        let height: CGFloat = 40
+        f.origin.y = f.size.height - height
+        f.size.height = height
+        w.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        w.frame = f
+        w.rootViewController = self.snackBarViewController
+        w.isHidden = false
     }
 }
