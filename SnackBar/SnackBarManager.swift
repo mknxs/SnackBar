@@ -37,4 +37,8 @@ class SnackBarManager {
         let set = SnackBarSet(title: title, button: button, lifeTime: lifeTime, action: action)
         self.snackBarViewController.show(set:set, animated: true)
     }
+    
+    func hide() {
+        self.snackBarViewController.hide(animated: true)
+    }
 }

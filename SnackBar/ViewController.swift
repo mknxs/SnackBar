@@ -19,10 +19,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func buttonAction(_ sender: Any) {
+    @IBAction func showButtonAction(_ sender: Any) {
         let manager = SnackBarManager.shared
         manager.show(title: "show test", button: .custom("bar"))
     }
-
+    
+    @IBAction func closeButtonAction(_ sender: Any) {
+        let manager = SnackBarManager.shared
+        manager.hide()
+    }
 }
 

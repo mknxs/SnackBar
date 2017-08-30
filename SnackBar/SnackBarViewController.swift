@@ -16,22 +16,56 @@ class SnackBarViewController: UIViewController {
     @IBOutlet weak var snackBarHeight: NSLayoutConstraint!
     @IBOutlet weak var snackBarViewBottomMargin: NSLayoutConstraint!
     
+    struct Config {
+        static let AnimationDuration = 0.4
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        self.hide(animated: false)
     }
     
     func show(set: SnackBarManager.SnackBarSet, animated: Bool) {
-        self.clearState()
         self.setState(set: set)
+        self.snackBarView.isHidden = false
         self.snackBarViewBottomMargin.constant = 0
         let proc = { () -> () in
             self.snackBarView.superview?.layoutIfNeeded()
         }
         
         if animated {
-            UIView.animate(withDuration: 0.5, animations: proc)
+            UIView.animate(withDuration: Config.AnimationDuration, animations: proc)
         } else {
             proc()
+        }
+    }
+    
+    func hide(animated: Bool, completion: (() -> Void)? = nil) {
+        guard self.isShown else {
+            completion?()
+            return
+        }
+        
+        self.snackBarViewBottomMargin.constant = -self.snackBarHeight.constant
+        
+        let proc = { () -> () in
+            self.snackBarView.superview?.layoutIfNeeded()
+        }
+        
+        let finishing = {
+            self.clearState()
+            self.snackBarView.isHidden = true
+            completion?()
+        }
+        
+        if animated {
+            UIView.animate(withDuration: Config.AnimationDuration, animations: proc, completion: { (_) in
+                finishing()
+            })
+        } else {
+            proc()
+            finishing()
         }
     }
     
@@ -51,5 +85,9 @@ class SnackBarViewController: UIViewController {
         self.titleLabel.text = nil
         self.button.isHidden = true
         self.button.isEnabled = false
+    }
+    
+    fileprivate var isShown: Bool {
+        return !self.snackBarView.isHidden
     }
 }
