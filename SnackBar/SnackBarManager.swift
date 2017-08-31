@@ -16,6 +16,8 @@ class SnackBarManager {
     let window = SnackBarWindow(frame: .zero)
     let snackBarViewController = SnackBarViewController(nibName: nil, bundle: nil)
     
+    var processingSnackBarSet: SnackBarSet? = nil
+    
     init() {
         let w = self.window
         w.windowLevel = UIWindowLevelAlert
@@ -34,11 +36,22 @@ class SnackBarManager {
     }
     
     func show(title: String, button: SnackBarSet.Button, lifeTime: TimeInterval = 5.0, action: (() -> Void)? = nil) {
-        let set = SnackBarSet(title: title, button: button, lifeTime: lifeTime, action: action)
-        self.snackBarViewController.show(set:set, animated: true)
+        let show = {
+            let set = SnackBarSet(title: title, button: button, lifeTime: lifeTime, action: action)
+            self.processingSnackBarSet = set
+            self.snackBarViewController.show(set:set, animated: true)
+        }
+        
+        if let _ = self.processingSnackBarSet {
+            self.snackBarViewController.hide(animated: true, completion: show)
+        } else {
+            show()
+        }
     }
     
     func hide() {
-        self.snackBarViewController.hide(animated: true)
+        self.snackBarViewController.hide(animated: true) {
+            self.processingSnackBarSet = nil
+        }
     }
 }
