@@ -16,6 +16,8 @@ class SnackBarViewController: UIViewController {
     @IBOutlet weak var snackBarHeight: NSLayoutConstraint!
     @IBOutlet weak var snackBarViewBottomMargin: NSLayoutConstraint!
     
+    var hideSnackBarTimer: Timer? = nil
+    
     struct Config {
         static let AnimationDuration = 0.4
     }
@@ -79,12 +81,18 @@ class SnackBarViewController: UIViewController {
             self.button.layoutIfNeeded()
             UIView.setAnimationsEnabled(true)
         }
+        
+        self.hideSnackBarTimer = Timer.scheduledTimer(withTimeInterval: set.lifeTime, repeats: false) { (_) in
+            self.hide(animated: true, completion: nil)
+        }
     }
     
     fileprivate func clearState() {
         self.titleLabel.text = nil
         self.button.isHidden = true
         self.button.isEnabled = false
+        self.hideSnackBarTimer?.invalidate()
+        self.hideSnackBarTimer = nil
     }
     
     fileprivate var isShown: Bool {
