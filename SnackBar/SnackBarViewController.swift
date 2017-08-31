@@ -17,6 +17,7 @@ class SnackBarViewController: UIViewController {
     @IBOutlet weak var snackBarViewBottomMargin: NSLayoutConstraint!
     
     var hideSnackBarTimer: Timer? = nil
+    var rightButtonAction: (() -> Void?)? = nil
     
     struct Config {
         static let AnimationDuration = 0.4
@@ -71,15 +72,28 @@ class SnackBarViewController: UIViewController {
         }
     }
     
+    // MARK: - actions
+    
+    @IBAction func rightButtonAction(_ sender: Any) {
+        self.rightButtonAction?()
+        self.hide(animated: true)
+    }
+    
+    // MARK: - priate
+    
     fileprivate func setState(set: SnackBarManager.SnackBarSet) {
         self.titleLabel.text = set.title
-        self.button.isHidden = set.button == SnackBarManager.SnackBarSet.Button.nothing
-        self.button.isEnabled = !self.button.isHidden
-        if self.button.isEnabled {
-            UIView.setAnimationsEnabled(false)
-            self.button.setTitle(set.button.string, for: .normal)
-            self.button.layoutIfNeeded()
-            UIView.setAnimationsEnabled(true)
+        if let b = self.button {
+            b.isHidden = set.button == SnackBarManager.SnackBarSet.Button.nothing
+            b.isEnabled = !self.button.isHidden
+            self.rightButtonAction = set.action
+            
+            if b.isEnabled {
+                UIView.setAnimationsEnabled(false)
+                b.setTitle(set.button.string, for: .normal)
+                b.layoutIfNeeded()
+                UIView.setAnimationsEnabled(true)
+            }
         }
         
         self.hideSnackBarTimer = Timer.scheduledTimer(withTimeInterval: set.lifeTime, repeats: false) { (_) in
