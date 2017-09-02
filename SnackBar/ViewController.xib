@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SnackBar" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="0XO-xk-ngZ" id="pFu-vb-S91"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,28 +20,23 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hm5-Lf-LwM">
-                    <rect key="frame" x="169" y="80" width="37" height="30"/>
-                    <state key="normal" title="show"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0XO-xk-ngZ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <action selector="showButtonAction:" destination="-1" eventType="touchUpInside" id="A38-PB-MWI"/>
+                        <outlet property="dataSource" destination="-1" id="qjL-om-Seh"/>
+                        <outlet property="delegate" destination="-1" id="KDO-Vq-fDu"/>
                     </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oE-gR-8Cu">
-                    <rect key="frame" x="169" y="120" width="37" height="30"/>
-                    <state key="normal" title="close"/>
-                    <connections>
-                        <action selector="closeButtonAction:" destination="-1" eventType="touchUpInside" id="kKG-6m-FIG"/>
-                    </connections>
-                </button>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="hm5-Lf-LwM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="QCF-4D-dbA"/>
-                <constraint firstItem="3oE-gR-8Cu" firstAttribute="top" secondItem="hm5-Lf-LwM" secondAttribute="bottom" constant="10" id="Qs0-U8-7gY"/>
-                <constraint firstItem="3oE-gR-8Cu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fDD-KC-6dc"/>
-                <constraint firstItem="hm5-Lf-LwM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="v7U-3A-IjR"/>
+                <constraint firstAttribute="bottom" secondItem="0XO-xk-ngZ" secondAttribute="bottom" id="O7u-Gf-mys"/>
+                <constraint firstAttribute="trailing" secondItem="0XO-xk-ngZ" secondAttribute="trailing" id="PQH-hn-oBo"/>
+                <constraint firstItem="0XO-xk-ngZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="V7L-aN-crr"/>
+                <constraint firstItem="0XO-xk-ngZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bCi-ug-GGJ"/>
             </constraints>
+            <point key="canvasLocation" x="23.5" y="33.5"/>
         </view>
     </objects>
 </document>

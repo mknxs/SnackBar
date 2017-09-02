@@ -8,32 +8,55 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func showButtonAction(_ sender: Any) {
-        let manager = SnackBarManager.shared
-        manager.show(title: "show test", button: .custom("hoge")) {
-            let alert = UIAlertController(title: "test", message: "button action", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "ok", style: .default) { (action) in
-                // do nothing.
-            }
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: nil)
-        }
+    @IBOutlet weak var tableView: UITableView!
+    
+    var dataSource = [String]()
+    var temporaryDataSurce = [String]()
+    
+    struct Constants {
+        static let CellIdentifier = "CellIdentifier"
     }
     
-    @IBAction func closeButtonAction(_ sender: Any) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.CellIdentifier)
+        for i in 0..<10 { self.dataSource.append("Item\(i)") }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifier, for: indexPath)
+        cell.textLabel?.text = self.dataSource[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+ 
         let manager = SnackBarManager.shared
-        manager.hide()
+        manager.show(title: "cell\(indexPath.row) tapped.", button: .close)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        self.temporaryDataSurce = self.dataSource
+        self.dataSource.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    @IBAction func addButtonAction(_ sender: Any) {
+        self.temporaryDataSurce = self.dataSource
+        self.dataSource.append("Item\(self.dataSource.count)")
+        tableView.insertRows(at: [IndexPath(row: self.dataSource.count - 1, section: 0)], with: .automatic)
     }
 }
 
