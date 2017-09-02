@@ -30,7 +30,7 @@ extension SnackBarManager {
                 case .close:
                     return "close" // FIXME: 
                 case .undo:
-                    return ""   // FIXME: 
+                    return "undo"   // FIXME: 
                 case .custom(let s):
                     return s
                 }

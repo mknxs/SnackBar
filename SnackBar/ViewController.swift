@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource = [String]()
-    var temporaryDataSurce = [String]()
+    var temporaryDataSurce: [String]? = nil
     
     struct Constants {
         static let CellIdentifier = "CellIdentifier"
@@ -48,15 +48,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let item = self.dataSource[indexPath.row]
         self.temporaryDataSurce = self.dataSource
         self.dataSource.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        let manager = SnackBarManager.shared
+        manager.show(title: "\(item) is deleted.", button: .undo) {
+            if let source = self.temporaryDataSurce {
+                self.dataSource = source
+                self.temporaryDataSurce = nil
+                self.tableView.reloadData()
+            }
+        }
     }
     
     @IBAction func addButtonAction(_ sender: Any) {
         self.temporaryDataSurce = self.dataSource
-        self.dataSource.append("Item\(self.dataSource.count)")
+        let item = "Item\(self.dataSource.count)"
+        self.dataSource.append(item)
         tableView.insertRows(at: [IndexPath(row: self.dataSource.count - 1, section: 0)], with: .automatic)
+        
+        let manager = SnackBarManager.shared
+        manager.show(title: "\(item) is added.", button: .undo) {
+            if let source = self.temporaryDataSurce {
+                self.dataSource = source
+                self.temporaryDataSurce = nil
+                self.tableView.reloadData()
+            }
+        }
+
     }
 }
 
