@@ -10,6 +10,11 @@ import UIKit
 
 class SnackBarWindow: UIWindow {
     
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let v = super.hitTest(point, with: event)
+        return v == self ? nil : v
+    }
+    
     func setupDefaultSettings() {
         self.backgroundColor = UIColor.clear
         self.isOpaque = false

@@ -31,7 +31,7 @@ class SnackBarViewController: UIViewController {
     
     func show(set: SnackBarManager.SnackBarSet, animated: Bool) {
         self.setState(set: set)
-        self.snackBarView.isHidden = false
+        self.view.isHidden = false
         self.snackBarViewBottomMargin.constant = 0
         let proc = { () -> () in
             self.snackBarView.superview?.layoutIfNeeded()
@@ -58,7 +58,7 @@ class SnackBarViewController: UIViewController {
         
         let finishing = {
             self.clearState()
-            self.snackBarView.isHidden = true
+            self.view.isHidden = true
             completion?()
         }
         
